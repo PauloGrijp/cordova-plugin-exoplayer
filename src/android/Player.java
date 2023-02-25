@@ -33,6 +33,7 @@ import android.util.*;
 import android.view.*;
 import android.widget.*;
 import com.google.android.exoplayer2.*;
+import com.google.android.exoplayer2.ui.StyledPlayerView;
 import com.google.android.exoplayer2.extractor.*;
 import com.google.android.exoplayer2.source.*;
 import com.google.android.exoplayer2.source.dash.*;

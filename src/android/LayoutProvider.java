@@ -34,6 +34,7 @@ import java.lang.*;
 import java.lang.String;
 import org.json.*;
 import com.squareup.picasso.*;
+import com.google.android.exoplayer2.ui.StyledPlayerView;
 
 public class LayoutProvider {
     private enum BUTTON { exo_prev, exo_rew, exo_play, exo_pause, exo_ffwd, exo_next }
