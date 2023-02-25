@@ -56,7 +56,7 @@ public class Player {
     private final Configuration config;
     private Dialog dialog;
     private SimpleExoPlayer exoPlayer;
-    private SimpleExoPlayerView exoView;
+    private StyledPlayerView exoView;
     private CordovaWebView webView;
     private int controllerVisibility;
     private boolean paused = false;
