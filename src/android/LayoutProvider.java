@@ -94,7 +94,7 @@ public class LayoutProvider {
                         }
                         else {
                             // Loading from external source.
-                            Picasso.get(imageButton.getContext()).load(buttonUrl).into(imageButton);
+                            Picasso.get().load(buttonUrl).into(imageButton);
                         }
                     }
                     else if (null != buttonsColor) {
@@ -139,7 +139,7 @@ public class LayoutProvider {
             }
         }
         if(null != streamImage) {
-            Picasso.get(imageView.getContext()).load(streamImage).into(imageView);
+            Picasso.get().load(streamImage).into(imageView);
         }
         if(null != streamTitle) {
             titleView.setText(streamTitle);
