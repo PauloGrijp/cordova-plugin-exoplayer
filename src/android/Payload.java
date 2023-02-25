@@ -21,7 +21,7 @@
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  SOFTWARE.
  */
-package co.frontyard.cordova.plugin.exoplayer;
+package co.PauloGrijp.cordova.plugin.exoplayer;
 
 import android.util.Log;
 import android.util.*;
