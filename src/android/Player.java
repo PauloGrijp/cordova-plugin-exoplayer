@@ -33,7 +33,6 @@ import android.util.*;
 import android.view.*;
 import android.widget.*;
 import com.google.android.exoplayer2.*;
-import com.google.android.exoplayer2.ui.StyledPlayerView;
 import com.google.android.exoplayer2.extractor.*;
 import com.google.android.exoplayer2.source.*;
 import com.google.android.exoplayer2.source.dash.*;
@@ -57,7 +56,7 @@ public class Player {
     private final Configuration config;
     private Dialog dialog;
     private SimpleExoPlayer exoPlayer;
-    private StyledPlayerView exoView;
+    private SimpleExoPlayerView exoView;
     private CordovaWebView webView;
     private int controllerVisibility;
     private boolean paused = false;

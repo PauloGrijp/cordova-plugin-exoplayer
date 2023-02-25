@@ -34,7 +34,6 @@ import java.lang.*;
 import java.lang.String;
 import org.json.*;
 import com.squareup.picasso.*;
-import com.google.android.exoplayer2.ui.StyledPlayerView;
 
 public class LayoutProvider {
     private enum BUTTON { exo_prev, exo_rew, exo_play, exo_pause, exo_ffwd, exo_next }
@@ -47,8 +46,8 @@ public class LayoutProvider {
         return view;
     }
 
-    public static StyledPlayerView getExoPlayerView(Activity activity, Configuration config) {
-        StyledPlayerView view = new StyledPlayerView(activity);
+    public static SimpleExoPlayerView getExoPlayerView(Activity activity, Configuration config) {
+        SimpleExoPlayerView view = new SimpleExoPlayerView(activity);
         view.setLayoutParams(new LinearLayout.LayoutParams(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.MATCH_PARENT));
         if (config.isAspectRatioFillScreen()) {
             view.setResizeMode(AspectRatioFrameLayout.RESIZE_MODE_FILL);
@@ -63,7 +62,7 @@ public class LayoutProvider {
         return view;
     }
 
-    public static void setupController(StyledPlayerView parentView, Activity activity, JSONObject controller) {
+    public static void setupController(SimpleExoPlayerView parentView, Activity activity, JSONObject controller) {
         if (null != controller) {
             parentView.setUseController(true);
             setupButtons(parentView, activity, controller);
@@ -75,7 +74,7 @@ public class LayoutProvider {
         }
     }
 
-    private static void setupButtons(StyledPlayerView parentView, Activity activity, JSONObject controller) {
+    private static void setupButtons(SimpleExoPlayerView parentView, Activity activity, JSONObject controller) {
         String packageName = activity.getPackageName();
         String buttonsColor = controller.optString("buttonsColor");
 
@@ -111,7 +110,7 @@ public class LayoutProvider {
         }
     }
 
-    private static void setupBar(StyledPlayerView parentView, Activity activity, JSONObject controller) {
+    private static void setupBar(SimpleExoPlayerView parentView, Activity activity, JSONObject controller) {
         String streamTitle = controller.optString("streamTitle", null);
         String streamDescription = controller.optString("streamDescription", null);
         String streamImage = controller.optString("streamImage", null);
@@ -166,7 +165,7 @@ public class LayoutProvider {
         }
     }
 
-    private static void setupBuffering(StyledPlayerView parentView, Activity activity, JSONObject controller) {
+    private static void setupBuffering(SimpleExoPlayerView parentView, Activity activity, JSONObject controller) {
         String bufferingColor = controller.optString("bufferingColor");
         ProgressBar bufferingBar = (ProgressBar)findView(parentView, activity, "exo_buffering");
         if (null != bufferingBar && null != bufferingColor) {
@@ -174,7 +173,7 @@ public class LayoutProvider {
         }
     }
 
-    public static void setBufferingVisibility(StyledPlayerView parentView, Activity activity, boolean visibile) {
+    public static void setBufferingVisibility(SimpleExoPlayerView parentView, Activity activity, boolean visibile) {
         ProgressBar progressBar = (ProgressBar)findView(parentView, activity, "exo_buffering");
         if (null != progressBar) {
             progressBar.setVisibility(visibile ? View.VISIBLE : View.GONE);
