@@ -33,7 +33,7 @@ import com.google.android.exoplayer2.ui.*;
 import java.lang.*;
 import java.lang.String;
 import org.json.*;
-import com.squareup.picasso.Picasso;
+import com.squareup.picasso.*;
 
 public class LayoutProvider {
     private enum BUTTON { exo_prev, exo_rew, exo_play, exo_pause, exo_ffwd, exo_next }
@@ -94,7 +94,7 @@ public class LayoutProvider {
                         }
                         else {
                             // Loading from external source.
-                            Picasso.with(imageButton.getContext()).load(buttonUrl).into(imageButton);
+                            Picasso.get(imageButton.getContext()).load(buttonUrl).into(imageButton);
                         }
                     }
                     else if (null != buttonsColor) {
@@ -139,7 +139,7 @@ public class LayoutProvider {
             }
         }
         if(null != streamImage) {
-            Picasso.with(imageView.getContext()).load(streamImage).into(imageView);
+            Picasso.get(imageView.getContext()).load(streamImage).into(imageView);
         }
         if(null != streamTitle) {
             titleView.setText(streamTitle);
