@@ -21,7 +21,7 @@
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  SOFTWARE.
  */
-package co.frontyard.cordova.plugin.exoplayer;
+package co.PauloGrijp.cordova.plugin.exoplayer;
 
 import android.app.*;
 import android.graphics.*;
@@ -33,7 +33,7 @@ import com.google.android.exoplayer2.ui.*;
 import java.lang.*;
 import java.lang.String;
 import org.json.*;
-import com.squareup.picasso.*;
+import com.squareup.picasso.Picasso;
 
 public class LayoutProvider {
     private enum BUTTON { exo_prev, exo_rew, exo_play, exo_pause, exo_ffwd, exo_next }
